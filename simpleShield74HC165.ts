@@ -37,9 +37,9 @@ namespace SimpleShieldKey
         return val;
     }
 
-    //% blockID == Listen_Key
-    //% block= "Key %pin |Press"
-    //% weight = 90
+    //% blockID==Listen_Key
+    //% block="Key %pin |Press"
+    //% weight=90
     export function Listen_Key(pin: KEY): boolean
     {
         let val = Read74HC165();
