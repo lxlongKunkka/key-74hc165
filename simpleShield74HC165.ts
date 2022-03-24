@@ -30,10 +30,10 @@ namespace SimpleShieldKey
             val = val << 1;
             pins.digitalWritePin(SR_CLK, 0);
             control.waitMicros(10);
+            pins.digitalWritePin(SR_CLK, 1);
             let tmp = pins.digitalReadPin(INSR0_DATA);
             val |= tmp;
-            pins.digitalWritePin(SR_CLK, 1);
-            control.waitMicros(10);
+            
         }
         return val;
     }
