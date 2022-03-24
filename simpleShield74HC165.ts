@@ -20,7 +20,7 @@ namespace SimpleShieldKey
 {
     function Read74HC165(): number
     {
-        let val = 0;
+        let val = 255;
         pins.digitalWritePin(INSR_LATCH, 0);    //scan
         control.waitMicros(10);
         pins.digitalWritePin(INSR_LATCH, 1);
@@ -33,7 +33,6 @@ namespace SimpleShieldKey
             pins.digitalWritePin(SR_CLK, 1);
             let tmp = pins.digitalReadPin(INSR0_DATA);
             val |= tmp;
-            
         }
         return val;
     }
