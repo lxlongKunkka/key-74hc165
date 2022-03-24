@@ -42,7 +42,9 @@ namespace SimpleShieldKey
     //% weight=90
     export function Listen_Key(pin: KEY): boolean
     {
-        if(pins.digitalReadPin(DigitalPin.P5))
+        return true;
+        /*
+        if(pins.digitalReadPin(DigitalPin.P5))  //按下是0, 松开是1
         {
             return true;
         }
@@ -50,6 +52,7 @@ namespace SimpleShieldKey
         {
             return false;
         }
+        */
         /*
         let val = Read74HC165();
         let res = 0;
