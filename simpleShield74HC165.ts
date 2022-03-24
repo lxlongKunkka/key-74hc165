@@ -43,7 +43,7 @@ namespace SimpleShieldKey
     export function Listen_Key(pin: KEY): boolean
     {
         let val = Read74HC165();
-        let res = 2;
+        let res = 0;
         switch(pin)
         {
             case KEY.UP:
