@@ -70,7 +70,14 @@ namespace SimpleShieldKey
             default:
                 break;
         }
-        return !res;
+        if(res == 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
 
