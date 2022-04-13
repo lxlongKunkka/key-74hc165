@@ -1,7 +1,7 @@
 // Add your code here
 
-let SR_CLK = DigitalPin.P20;
-let INSR0_DATA = DigitalPin.P14;        //data
+let SR_CLK = DigitalPin.P16;
+let INSR0_DATA = DigitalPin.P12;        //data
 let INSR_LATCH = DigitalPin.P9;         //PL
 
 enum KEY
@@ -21,6 +21,7 @@ namespace SimpleShieldKey
     function Read74HC165(): number
     {
         let val = 0;
+        
         pins.digitalWritePin(INSR_LATCH, 0);    //scan
         control.waitMicros(2000);
         pins.digitalWritePin(INSR_LATCH, 1);
