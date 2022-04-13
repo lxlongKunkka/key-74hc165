@@ -28,6 +28,8 @@ namespace SimpleShieldKey
         let i = 0;
         for(i=0; i<8; i++)
         {
+            basic.showNumber(i);
+            control.waitMicros(2000);
             val = val << 1;
             pins.digitalWritePin(SR_CLK, 0);
             control.waitMicros(2000);
@@ -45,7 +47,6 @@ namespace SimpleShieldKey
     export function Listen_Key(pin: KEY): boolean
     {
         let val = Read74HC165();
-        basic.showNumber(val)
         let res = 1;
         switch(pin)
         {
