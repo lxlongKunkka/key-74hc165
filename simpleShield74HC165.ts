@@ -32,6 +32,7 @@ namespace SimpleShieldKey
             pins.digitalWritePin(SR_CLK, 0);
             control.waitMicros(2000);
             pins.digitalWritePin(SR_CLK, 1);
+            control.waitMicros(2000);
             let tmp = pins.digitalReadPin(INSR0_DATA);
             val |= tmp;
         }
