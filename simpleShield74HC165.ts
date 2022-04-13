@@ -29,15 +29,17 @@ namespace SimpleShieldKey
         for(i=0; i<8; i++)
         {
             basic.showNumber(i);
-            control.waitMicros(2000000);
+            control.waitMicros(1000000);
             val = val << 1;
             pins.digitalWritePin(SR_CLK, 0);
-            control.waitMicros(2000000);
+            control.waitMicros(1000000);
             pins.digitalWritePin(SR_CLK, 1);
-            control.waitMicros(2000000);
+            control.waitMicros(1000000);
             let tmp = pins.digitalReadPin(INSR0_DATA);
             val |= tmp;
         }
+        basic.showNumber(val);
+        control.waitMicros(5000000);
         return val;
     }
 
