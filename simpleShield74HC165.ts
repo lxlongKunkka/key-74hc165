@@ -28,20 +28,20 @@ namespace SimpleShieldKey
         let i = 0;
         for(i=0; i<8; i++)
         {
-            //basic.showNumber(i);
-            //control.waitMicros(1000000);
+            basic.showNumber(i);
+            control.waitMicros(1000000);
             val = val << 1;
             let tmp = pins.digitalReadPin(INSR0_DATA);
-            //basic.showNumber(tmp);
+            basic.showNumber(tmp);
             val |= tmp;
-            //control.waitMicros(1000);
+            control.waitMicros(1000);
             pins.digitalWritePin(SR_CLK, 0);
             control.waitMicros(1000);
             pins.digitalWritePin(SR_CLK, 1);
             control.waitMicros(1000);
         }
-        //basic.showNumber(val);
-        //control.waitMicros(2000000);
+        basic.showNumber(val);
+        control.waitMicros(2000000);
         return val;
     }
 
